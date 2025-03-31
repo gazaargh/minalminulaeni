@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid al Fitr</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<style>
+  body{
+    background-image: url(1789.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center
+  }
+</style>
+<body 
+class="flex justify-center h-screen items-center">
+
+  <div class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-cyan-300 rounded-2xl text-center animate__animated animate__fadeIn m-8 w-80" id="kartu">
+
+    <h1 class="text-3xl font-semibold">Happy Eid al Fitr 1446H
+    </h1>
+
+    <h1 class="text-4xl text-pink-300 font-bold animate__animated animate__fadeIn animate__delay-2s"> Aeni
+    </h1> 
+
+    <button class="p-2 bg-blue-300 text-white rounded mt-5 hover:bg-blue-500 transition ease-in w-full animate__animated animate__delay-1s animate__pulse animate__infinite" onclick="UbahKartu()">Klik Disini
+    </button>
+  </div>
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script>
+const defaults = {
+  spread: 360,
+  ticks: 50,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 30,
+  shapes: ["star"],
+  colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+};
+
+function shoot() {
+  confetti({
+    ...defaults,
+    particleCount: 40,
+    scalar: 1.2,
+    shapes: ["star"],
+  });
+
+  confetti({
+    ...defaults,
+    particleCount: 10,
+    scalar: 0.75,
+    shapes: ["circle"],
+  });
+}
+
+setTimeout(shoot, 0);
+setTimeout(shoot, 100);
+setTimeout(shoot, 200);
+let kartu = document.getElementById("kartu");
+function UbahKartu() {
+  kartu.innerHTML = `<h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
+    Minal Aidzin Wal Faidzin ya ni.. yang ini bener bukan minal minul hahaa. Yahaa kasian puasanya ga full 30 hari. Maafin salah aku ke aeni ya (walaupun gaada sih harusnya). Semoga ibadah aeni kejaga terus ya kedepannya, jangan cuma pas Ramadhan aja (pliss aku juga mau gitu).
+  </h1>
+  <h2 class="mt-3 animate__animated animate__fadeIn">From : Gaza si Mingyu lokal </h2>
+  <button 
+  class="p-2 bg-slate-600 text-white rounded mt-5 hover:bg-slate-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="refresh()"
+  >
+  Tutup
+  </button>
+  `
+
+}
+function refresh() {
+  location.reload();
+}
+</script>
+</body>
+</html>
